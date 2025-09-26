@@ -3,7 +3,6 @@
 This is a lightweight and interpretable framework for **language-based audio source separation**.  
 Given a mixture and a text query (e.g., *“accordion”*), it isolates the matching source using **Non-negative Matrix Factorization (NMF)** + **CLAP embeddings**.
 
----
 
 ## ✨ Features
 - Natural language queries via CLAP (text & audio embeddings).
@@ -11,10 +10,11 @@ Given a mixture and a text query (e.g., *“accordion”*), it isolates the matc
 - Optional temporal smoothing with **LMS**, **NLMS**, or **Kalman filter**.
 - Evaluated with **SDR, SI-SDR, and SDRi**.
 
----
 
-<!-- ## 📂 Code Overview
-.
+## 📂 Code Overview
+```
+├── models
+│ └── clap_encoder.py   # CLAP encoder
 ├── nmf_eval.py         # NMF + CLAP with dynamic merging
 ├── nmf_eval_lms.py     # NMF + CLAP + LMS smoothing
 ├── nmf_eval_nlms.py    # NMF + CLAP + NLMS smoothing
@@ -23,15 +23,14 @@ Given a mixture and a text query (e.g., *“accordion”*), it isolates the matc
 ├── try_nlms.py         # NMF + NLMS smoothing
 ├── try_kalman.py       # NMF + Kalman smoothing
 └── README.md
+```
 
---- -->
 
 ## 🧪 Experiments
 - **Exp 1**: Baseline β-NMF → chose **β=1 (KL)**, **K=4**.  
 - **Exp 2**: Add mask smoothing (**LMS / NLMS / Kalman**).  
-- **Exp 3**: Full LASS → plain NMF, dynamic merging, NMF+filters, vs AudioSep.  
+- **Exp 3**: Full LASS → plain NMF, dynamic merging, NMF+filters.  
 
----
 
 ## 🚀 Usage
 ```bash
