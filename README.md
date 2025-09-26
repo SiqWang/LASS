@@ -14,7 +14,8 @@ Given a mixture and a text query (e.g., *“accordion”*), it isolates the matc
 ## 📂 Code Overview
 ```
 ├── models
-│ └── clap_encoder.py   # CLAP encoder
+│ └── clap_encoder.py   # CLAP encoder (from AudioSep)
+│ └── ...
 ├── nmf_eval.py         # NMF + CLAP with dynamic merging
 ├── nmf_eval_lms.py     # NMF + CLAP + LMS smoothing
 ├── nmf_eval_nlms.py    # NMF + CLAP + NLMS smoothing
